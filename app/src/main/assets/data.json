@@ -1,0 +1,14 @@
+[
+  { "name" : "Saurav Kalsoor",
+    "email" : "saurav@getdefault.in",
+    "password" : "getdefault",
+    "phone" : "8073894026",
+    "age": "20"
+  },
+  { "name" : "Rishabh Jain",
+    "email" : "rishabh@getdefault.in",
+    "password" : "getdefault",
+    "phone" : "8147921339",
+    "age": "28"
+  }
+]
