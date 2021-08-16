@@ -1,15 +1,13 @@
 package com.getdefault.utprojects.fragments
 
 import android.os.Bundle
-import android.util.Patterns
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
-import com.getdefault.utprojects.R
-import com.getdefault.utprojects.User
+import com.getdefault.utprojects.*
 import com.getdefault.utprojects.databinding.FragmentSignupBinding
 
 class SignupFragment : Fragment() {
@@ -50,19 +48,19 @@ class SignupFragment : Fragment() {
         }else
             binding.tilSignupAge.error = null
 
-        if(phone.isEmpty() || phone.length != 10){
+        if(!isPhoneValid(phone)){
             binding.tilSignupPhone.error = getString(R.string.empty_text)
             areCredentialsValid = false
         }else
             binding.tilSignupPhone.error = null
 
-        if(password.length <= 6){
+        if(!isPasswordValid(password)){
             binding.tilSignupPwd.error = getString(R.string.invalid_password)
             areCredentialsValid = false
         }else
             binding.tilSignupPwd.error = null
 
-        if(email.isNotEmpty() && Patterns.EMAIL_ADDRESS.matcher(email).matches()){
+        if(isEmailValid(email)){
             binding.tilSignupEmail.error = null
         }else{
             binding.tilSignupEmail.error = getString(R.string.invalid_email)

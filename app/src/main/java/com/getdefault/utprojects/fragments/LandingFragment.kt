@@ -26,6 +26,11 @@ class LandingFragment : Fragment() {
         binding.btnSignup.setOnClickListener {
             findNavController().navigate(LandingFragmentDirections.actionLandingFragmentToSignupFragment())
         }
+
+        binding.btnCrash.setOnClickListener {
+            throw RuntimeException("Test Crash")
+        }
+
         return binding.root
     }
 }
