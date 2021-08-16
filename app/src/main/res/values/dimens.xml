@@ -2,6 +2,4 @@
 <resources>
     <dimen name="normal_padding">10dp</dimen>
     <dimen name="normal_margin">10dp</dimen>
-    <dimen name="radius_border">10dp</dimen>
-    <dimen name="stroke_width">2dp</dimen>
 </resources>

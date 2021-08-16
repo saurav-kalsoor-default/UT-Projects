@@ -35,6 +35,15 @@ class LoginViewModel(application : Application) : ViewModel() {
         }
     }
 
+    fun isEmailValid(email : String) : Boolean {
+        return email.isNotEmpty() && Patterns.EMAIL_ADDRESS.matcher(email).matches()
+    }
+
+    fun isPasswordValid(password : String) : Boolean {
+         return password.isNotEmpty() && password.length >= 6
+    }
+
+
 }
 
 class LoginViewModelProvider(private val application: Application) : ViewModelProvider.Factory{
